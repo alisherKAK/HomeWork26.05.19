@@ -28,7 +28,7 @@ namespace GameOfThrones.WpfApp
                 genderTextBlock.Text = $"Gender: {character.Gender}";
                 houseTextBlock.Text = $"House: {character.House}";
                 isAliveTextBlock.Text = $"Is Alive: {character.Alive}";
-                birthDateTextBlock.Text = $"Birth Date: {character.Birth} y";
+                birthDateTextBlock.Text = $"Birth Date: {character.Birth}";
                 deathDateTextBlock.Text = $"Death Date: {character.Death}";
                 placeOfBirthTextBlock.Text = $"Place of birth: {character.PlaceOfBirth}";
                 placeOfDeathTextBlock.Text = $"Place of death: {character.PlaceOfDeath}";
