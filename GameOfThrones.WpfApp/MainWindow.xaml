@@ -4,9 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameOfThrones.WpfApp"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85*"/>
+                <ColumnDefinition Width="311*"/>
+            </Grid.ColumnDefinitions>
+            <cefSharp:ChromiumWebBrowser
+        x:Name="ChromiumWebBrowser"
+        Address="http://viewers-guide.hbo.com/game-of-thrones/season-6/episode-10/map" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Foreground="White" Name="characterNameTextBox"  materialDesign:HintAssist.Hint="Character Name" TextWrapping="Wrap" TextChanged="CharacterNameTextBoxTextChanged" SelectionBrush="White" FontSize="22"/>
+        <ListBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Foreground="White" Name="charactersListBox" SelectionChanged="CharactersListBoxSelectionChanged" Grid.Row="1"/>
+        </Grid>
     </Grid>
 </Window>
